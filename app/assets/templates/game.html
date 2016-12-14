@@ -1,0 +1,22 @@
+<div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>
+        <timer countdown="40" interval="1000" finish-callback="gameCtrl.timeFinished()">{{seconds}}</timer>
+      </h1>
+      <hr />
+
+      <h2>{{gameCtrl.puzzle}}</h2>
+
+      <hr />
+
+      <form>
+        <input type="text" class="form-control"
+               ng-keydown="gameCtrl.handleKey($event)"
+               ng-change="gameCtrl.handleChange()" 
+               placeholder="Solve puzzle"
+               ng-model="gameCtrl.userInput" />
+      </form>
+    </div>
+
+</div> <!-- /container -->

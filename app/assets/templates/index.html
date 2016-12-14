@@ -1,0 +1,16 @@
+<div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Ready?</h1>
+      <hr />
+
+      <form>
+        <input type="text" class="form-control" placeholder="Your name" ng-model="indexCtrl.name" />
+        <p>
+          <br />
+          <a class="btn btn-lg btn-success" ng-disabled="indexCtrl.playDisabled()" role="button" ng-click="indexCtrl.play()">Play</a>
+        </p>
+      </form>
+    </div>
+
+</div> <!-- /container -->

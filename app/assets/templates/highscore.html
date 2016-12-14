@@ -1,0 +1,27 @@
+<div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Your Score</h1>
+      <br />
+      <h2>{{highscoreCtrl.playerScore}}</h2>
+
+      <br /><br />
+
+      <h2>Highscore</h2>
+      <hr />
+
+      <table width="100%">
+        <tr ng-repeat="scoreEntry in highscoreCtrl.data track by $index">
+          <td class="text-left">{{$index + 1}}</td>
+          <td class="text-left">{{scoreEntry.name}}</td>
+          <td class="text-right">{{scoreEntry.score}}</td>
+        </tr>
+      </table>
+
+      <p>
+        <br />
+        <a class="btn btn-lg btn-success" href="#" role="button" ui-sref="index">New game</a>
+      </p>
+    </div>
+
+</div> <!-- /container -->
