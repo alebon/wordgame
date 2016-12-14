@@ -10,6 +10,8 @@ export default class IndexController {
   }
 
   play() {
-    this._$state.go('play', {name: this.name});
+    if (!this.playDisabled()) {
+      this._$state.go('play', {name: this.name});
+    }    
   }
 }
